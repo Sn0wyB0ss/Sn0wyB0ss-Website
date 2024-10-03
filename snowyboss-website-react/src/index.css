@@ -9,12 +9,7 @@
   z-index: -1;
 }
 
-.contact {
-  background-color: black;
-  text-align: center;
-  color: white;
-  padding: 0.2em 0 2.5em 0;
-}
+
 
 .home {
   display: flex;
@@ -92,34 +87,7 @@
   padding-bottom: 1em;
 }
 
-.img-scroll-container img{
-  height: 200px;
-  width: 390px;
-  border-style: solid;
-  border-width: 0.07em;
-  border-radius: 1.5em;
-  color: white;
-}
 
-.img-scroll-container iframe{
-  height: 220px;
-  width: 390px;
-  min-width: 390px;
-  margin-right: 1.2em;
-  margin-left: 0.7em;
-  border-style: solid;
-  border-width: 0.07em;
-  border-radius: 1.5em;
-  color: white;
-}
 
-.audio-content audio {
-  padding-top: 10px;
-}
 
-.audio-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0em 1em 0em 1em;
-}
+

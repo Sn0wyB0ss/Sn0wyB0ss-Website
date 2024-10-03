@@ -1,9 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import Section from './components/Section.js';
+import Footer from './components/Footer.js';
+import ImageGlobal from './components/ImagesGlobal.js';
+import AudioGlobal from './components/AudioGlobal.js';
+
+const gameSectionData = [
+    {
+        image:ImageGlobal.punchtildead,
+        altText:"punchtildead",
+        link:"https://sn0wyb0ss.itch.io/punch-till-dead"
+    },
+];
+
+const videoSectionData = [
+    {
+        link:"https://www.youtube.com/embed/kIme9KZgxUM?si=CZBzhLgDSRZeRZig",
+    },
+    {
+        link:"https://www.youtube.com/embed/Ola54URoS3Q?si=5AHIit-Svc9b-Jhe",
+    },
+    {
+        link:"https://www.youtube.com/embed/mSUSMTagDpA?si=woyGQ0VNVbfcHsWu",
+    },
+];
+
+const audioOriginalSectionData = [
+    {
+        image:ImageGlobal.music1,
+        audio:AudioGlobal.music1
+    },
+    {
+        image:ImageGlobal.musicremix2,
+        audio:AudioGlobal.musicremix2
+    }
+];
+
+const audioRemixSectionData = [
+    {
+        image:ImageGlobal.musicremix2,
+        audio:AudioGlobal.musicremix2
+    },
+    {
+        image:ImageGlobal.musicremix1,
+        audio:AudioGlobal.musicremix1
+    },
+    {
+        image:ImageGlobal.musicremix3,
+        audio:AudioGlobal.musicremix3
+    },
+];
 
 function App() {
   return (
     <div>
+
       <video autoplay muted loop class="background-video">
           <source src={require("./assets/video/TileEditor.mp4")} type="video/mp4"/>
       </video>
@@ -44,102 +95,19 @@ function App() {
             </div>
       </div>
 
-      <div class="projects-section">
-          <div class="title-section">
-              Game Projects
-          </div>
-          <div class="img-scroll-container">
-              <a href="https://www.youtube.com/@sn0wyb0ss-26" target="_blank">
-                  <img src={require("./assets/image/punchtildead.png")} alt="punchtildead"/>
-              </a>
-          </div>
-      </div>
+      <Section isImage={true} list={gameSectionData} title="Game Projects"></Section>
 
-      <div class="projects-section">
-          <div class="title-section">
-              Video Editing
-          </div>
-          <div class="img-scroll-container">
+      <Section isVideo={true} list={videoSectionData} title="Game Projects"></Section>
 
-              <iframe src="https://www.youtube.com/embed/0Skhpo4uqlI?si=L__F-e9qo2uN-KEf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <iframe src="https://www.youtube.com/embed/kIme9KZgxUM?si=CZBzhLgDSRZeRZig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <iframe src="https://www.youtube.com/embed/Ola54URoS3Q?si=5AHIit-Svc9b-Jhe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <iframe src="https://www.youtube.com/embed/mSUSMTagDpA?si=woyGQ0VNVbfcHsWu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <Section isAudio={true} list={audioOriginalSectionData} title="Music Composition"></Section>
 
-          </div>
-      </div>
+      <Section isAudio={true} list={audioRemixSectionData} title="Remixes and Arranges"></Section>
 
-      <div class="projects-section">
-          <div class="title-section">
-              Music Composition
-          </div>
-          <div class="img-scroll-container">
-
-              <div class="audio-content">
-                  <a href="https://youtu.be/4qBPIcz9ZZk?si=sD8Zs4NZBhdV82wc" target="_blank">
-                      <img src={require("./assets/image/music1.png")} alt="punchtildead"/>
-                  </a>
-                  <audio controls loop> 
-                      <source src={require("./assets/music/music1.mp3")} type="audio/mpeg"/>
-                  </audio>
-              </div>
-
-              <div class="audio-content">
-                      <a href="https://youtu.be/msYLcK4wRDM" target="_blank">
-                          <img src={require("./assets/image/music2.png")} alt="punchtildead"/>
-                      </a>
-                      <audio controls loop> 
-                          <source src={require("./assets/music/music2.mp3")} type="audio/mpeg"/>
-                      </audio>
-              </div>
-
-          </div>
-      </div>
-
-      <div class="projects-section">
-          <div class="title-section">
-              Remixes and Arranges
-          </div>
-          <div class="img-scroll-container">
-
-              <div class="audio-content">
-                  <a href="https://youtu.be/ajBeX6_QgHs?si=1rw2SO1Ua3GDzEF-" target="_blank">
-                      <img src={require("./assets/image/musicremix2.png")} alt="undertaleremix"/>
-                  </a>
-                  <audio controls loop> 
-                      <source src={require("./assets/music/musicremix2.mp3")} type="audio/mpeg"/>
-                  </audio>
-              </div>
-
-              <div class="audio-content">
-
-                      <a href="https://youtu.be/XKsTujriv4o" target="_blank">
-                          <img src={require("./assets/image/musicremix1.png")} alt="punchtildead"/>
-                      </a>
-                      <audio controls loop> 
-                          <source src={require("./assets/music/musicremix1.mp3")} type="audio/mpeg"/>
-                      </audio>
-              </div>
-
-              <div class="audio-content">
-
-                  <a href="https://youtu.be/sZxBkmC1bMA?si=7IPCQNGvmx9e7koJ" target="_blank">
-                      <img src={require("./assets/image/musicremix3.png")} alt="cavestoryremix"/>
-                  </a>
-                  <audio controls loop> 
-                      <source src={require("./assets/music/musicremix3.mp3")} type="audio/mpeg"/>
-                  </audio>
-                  
-              </div>
-          </div>
-
-      </div>
-
-      <div class="contact">
-          <h1>Contact</h1>
-          <strong>Contact me at <span style={{color:"red"}}>danielsoaresalves294@gmail.com</span></strong>
-      </div>
+      <Footer emailAdress="danielsoaresalves294@gmail.com"></Footer>
+      
     </div>
+
+
   );
 }
 

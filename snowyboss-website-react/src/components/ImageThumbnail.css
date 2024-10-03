@@ -1,0 +1,8 @@
+.imageThumbnail{
+    height: 200px;
+    width: 390px;
+    border-style: solid;
+    border-width: 0.07em;
+    border-radius: 1.5em;
+    color: white;
+  }
