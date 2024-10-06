@@ -1,0 +1,42 @@
+.title-section {
+    color: white;
+    font-size: 2em;
+    margin: 0em 0 0.5em 0;
+    text-align: center;
+}
+
+.section-middle {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    color-scheme: dark;
+    
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 1em 1em 1em 1em;
+  }
+
+.section {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+  
+    border-top: white;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 0.05em;
+    
+    overflow: hidden;
+    padding: 1em 1em 1em 1em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #c2c9d2;
+  }
