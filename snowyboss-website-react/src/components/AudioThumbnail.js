@@ -6,7 +6,7 @@ class AudioThumbnail extends React.Component {
     render () {
         return(
             <div className="audio-thumbnail">
-                <a href="https://youtu.be/ajBeX6_QgHs?si=1rw2SO1Ua3GDzEF-" target="_blank">
+                <a href="https://www.youtube.com/watch?v=uSsYLmJYeY0&list=PLstHXphQeY8_UkMq-eD22nbmLpnQRKp0x" target="_blank" rel="noreferrer">
                     <img className="audio-img" src={this.props.image} alt="undertaleremix"/>
                 </a>
                 <audio controls loop> 
