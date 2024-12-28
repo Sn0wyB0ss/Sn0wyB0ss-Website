@@ -9,7 +9,8 @@ class Home extends React.Component {
         var currentDate = new Date();
         var diffDate = currentDate - birthDate;
         var ageDate = new Date(diffDate);
-        return Math.abs(ageDate.getUTCFullYear - 1970);
+        console.log(ageDate);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
 
     render () {
